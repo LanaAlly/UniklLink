@@ -3,483 +3,206 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sustainability of AI in Retail &amp; E-Commerce (TikTok Shop Seller) in Malaysia</title>
-<meta name="description" content="EIB20503 Business Research Method (L08), Group 4 — a study on whether AI adoption, its influencing factors, and customer satisfaction and trust translate into environmental sustainability among TikTok Shop sellers in Malaysia.">
-<link rel="icon" type="image/png" href="madani-logo.png">
+<title>UNIKL LINK</title>
 <style>
   :root{
-    --navy:#3a0a09;
-    --blue:#731412;
-    --gold:#e6b325;
-    --red:#731412;
-    --bg:#f7f8fb;
-    --card:#ffffff;
-    --text:#241010;
-    --muted:#6b5250;
-    --border:#ecdcd8;
-    --radius:14px;
+    --navy: #1a4066;
+    --bg: #eef0f2;
+    --card-bg: #f3f4f6;
+    --white: #ffffff;
+    --text-dark: #1c1c1c;
+    --text-grey: #7a7a7a;
+    --label-color: #2b5878;
+    --accent-blue: #2f6fb0;
   }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    margin:0;
-    font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    background:var(--bg);
-    color:var(--text);
-    line-height:1.65;
-  }
-  a{color:inherit;text-decoration:none;}
-  img{max-width:100%;display:block;}
+  * { box-sizing: border-box; }
+  html, body { margin:0; padding:0; background:#d9dde1; font-family:-apple-system,"Helvetica Neue",Arial,sans-serif; }
+  .phone { max-width:430px; margin:0 auto; background:var(--bg); min-height:100vh; position:relative; }
 
-  /* Top bar with official logos */
-  .topbar{
-    background:#ffffff;
-    border-bottom:1px solid var(--border);
-    padding:10px 24px;
-  }
-  .topbar-inner{
-    max-width:1100px;
-    margin:0 auto;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:16px;
-    flex-wrap:wrap;
-  }
-  .topbar-inner img{height:44px;width:auto;}
-
-  /* Nav */
-  header.nav{
-    background:var(--navy);
-    position:sticky;
-    top:0;
-    z-index:50;
-  }
-  .nav-inner{
-    max-width:1100px;
-    margin:0 auto;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:14px 24px;
-    flex-wrap:wrap;
-    gap:10px;
-  }
-  .brand{display:flex;align-items:center;gap:8px;color:#fff;font-weight:700;letter-spacing:.5px;font-size:15px;}
-  .brand img{height:20px;width:auto;}
-  .nav-links{display:flex;gap:26px;flex-wrap:wrap;}
-  .nav-links a{color:#e8cfc9;font-size:14px;font-weight:600;}
-  .nav-links a:hover{color:#fff;}
-
-  /* Hero */
-  .hero{
-    background:linear-gradient(135deg,var(--navy),var(--blue));
+  .app-header {
+    background: var(--navy);
     color:#fff;
-    padding:64px 24px 56px;
+    display:flex; align-items:center; justify-content:center; position:relative;
+    padding: 22px 20px 54px;
   }
-  .hero-inner{max-width:900px;margin:0 auto;text-align:center;}
-  .hero-eyebrow{
-    text-transform:uppercase;
-    letter-spacing:2px;
-    font-size:12px;
-    color:var(--gold);
-    font-weight:700;
-    margin-bottom:14px;
-  }
-  .hero h1{font-size:clamp(26px,4vw,40px);margin:0 0 18px;line-height:1.25;}
-  .hero p{color:#f0dbd5;font-size:16px;max-width:700px;margin:0 auto 18px;}
-  .hero-meta{font-size:13px;color:#d9b3ac;}
-  .hero-badges{
-    display:flex;justify-content:center;align-items:center;gap:20px;
-    margin-bottom:24px;flex-wrap:wrap;
-  }
-  .hero-badges img{
-    height:96px;width:96px;
-    object-fit:cover;
-    border-radius:12px;
-    border:3px solid var(--gold);
-    background:#000;
-  }
+  .app-header h1 { margin:0; font-size:26px; font-weight:700; }
+  .header-icons { position:absolute; right:20px; top:22px; display:flex; gap:20px; }
+  .header-icons button { background:none; border:none; color:#fff; cursor:pointer; padding:0; line-height:1; }
 
-  /* Feature images inside sections */
-  .section-image{
-    border-radius:var(--radius);
-    overflow:hidden;
-    margin:18px 0 26px;
-    box-shadow:0 4px 16px rgba(58,10,9,.14);
-  }
-  .section-image img{width:100%;display:block;}
-  .section-image figcaption{
-    background:var(--navy);
-    color:#f0dbd5;
-    font-size:12px;
-    padding:8px 14px;
+  .profile-wrap { padding:0 18px; margin-top:-38px; }
+  .profile-card {
+    background:var(--card-bg);
+    border-radius:14px;
+    padding:78px 22px 26px;
     text-align:center;
-  }
-  .section-image.badge{
-    max-width:180px;
-    margin-left:auto;margin-right:auto;
-  }
-
-  main{max-width:900px;margin:0 auto;padding:0 24px;}
-  section{padding:56px 0;border-bottom:1px solid var(--border);}
-  section:last-of-type{border-bottom:none;}
-  h2{
-    font-size:24px;
-    margin:0 0 22px;
-    color:var(--navy);
     position:relative;
-    padding-left:16px;
   }
-  h2::before{
-    content:"";
-    position:absolute;
-    left:0;top:4px;bottom:4px;
-    width:5px;
-    background:var(--red);
-    border-radius:3px;
-  }
-  h3{font-size:17px;color:var(--navy);margin:0 0 8px;}
-  p{color:var(--muted);margin:0 0 12px;text-align:justify;}
-
-  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
-  .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
-  @media(max-width:720px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr;}}
-
-  .card{
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:var(--radius);
-    padding:18px 20px;
-  }
-  .card .tag{
-    display:inline-block;
-    font-size:11px;
-    font-weight:700;
-    letter-spacing:.5px;
-    color:#fff;
-    background:var(--blue);
-    padding:3px 9px;
-    border-radius:20px;
-    margin-bottom:10px;
-  }
-
-  .var-card{border-top:4px solid var(--gold);}
-  .var-card .tag{background:var(--navy);}
-
-  .item-block{margin-bottom:22px;}
-  .item-block h4{
-    font-size:13px;text-transform:uppercase;letter-spacing:1px;
-    color:#fff;background:var(--navy);
-    display:inline-block;padding:6px 14px;border-radius:6px;
-    margin-bottom:10px;
-  }
-  .item-row{
-    display:flex;gap:14px;
-    padding:10px 0;
-    border-bottom:1px solid var(--border);
-    align-items:baseline;
-  }
-  .item-row:last-child{border-bottom:none;}
-  .item-code{
-    flex:0 0 46px;
-    font-weight:700;font-size:12px;color:var(--red);
-  }
-  .item-text{flex:1;color:var(--muted);font-size:14px;text-align:justify;}
-
-  .results-table{width:100%;border-collapse:collapse;margin:16px 0;font-size:13px;}
-  .results-table th,.results-table td{border:1px solid var(--border);padding:8px 10px;text-align:left;}
-  .results-table th{background:var(--navy);color:#fff;font-size:12px;text-transform:uppercase;letter-spacing:.5px;}
-  .results-table td.num{text-align:center;}
-  .pill{display:inline-block;padding:2px 10px;border-radius:20px;font-size:11px;font-weight:700;}
-  .pill.supported{background:#e4f3e6;color:#1e7a34;}
-  .pill.rejected{background:#fbe6e5;color:var(--red);}
-
-  /* About Us */
-  .team-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-    margin-bottom:28px;
-  }
-  @media(max-width:820px){.team-grid{grid-template-columns:repeat(2,1fr);}}
-  @media(max-width:480px){.team-grid{grid-template-columns:1fr;}}
-
-  .member{
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:var(--radius);
+  .avatar-wrap { position:absolute; top:-56px; left:50%; transform:translateX(-50%); }
+  .avatar {
+    width:132px; height:132px; border-radius:50%;
+    background:#dfe4e8; border:5px solid #fff;
+    display:flex; align-items:center; justify-content:center;
     overflow:hidden;
-    text-align:center;
-    box-shadow:0 1px 3px rgba(16,26,61,.06);
   }
-  .member .role{
-    font-size:11px;
-    text-transform:uppercase;
-    letter-spacing:1px;
-    color:var(--red);
-    font-weight:700;
-    padding-top:16px;
+  .avatar svg { width:100%; height:100%; }
+  .avatar img { width:100%; height:100%; object-fit:cover; }
+  .camera-btn {
+    position:absolute; bottom:2px; right:2px; width:36px; height:36px;
+    background:var(--accent-blue); border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    border:3px solid #fff;
   }
-  .member .photo{
-    width:150px;height:150px;
-    border-radius:50%;
-    overflow:hidden;
-    margin:10px auto 14px;
-    border:3px solid var(--gold);
-  }
-  .member .photo img{width:100%;height:100%;object-fit:cover;}
-  .member .name{
-    font-size:14px;
-    font-weight:700;
-    color:var(--navy);
-    padding:0 10px;
-    min-height:38px;
-  }
-  .member .id{
-    font-size:12px;
-    color:var(--muted);
-    padding-bottom:18px;
-  }
+  .profile-name { font-size:21px; font-weight:800; color:var(--text-dark); line-height:1.3; margin:2px 0 10px; }
+  .profile-email, .profile-id { color:var(--text-grey); font-size:14.5px; margin:2px 0; }
 
-  .lecturer-wrap{max-width:260px;margin:0 auto;}
+  .menu-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; padding:24px 18px 20px; }
+  .menu-card {
+    background:var(--white); border-radius:8px;
+    padding:26px 6px 18px; text-align:center;
+    display:flex; flex-direction:column; align-items:center; gap:16px;
+    cursor:pointer;
+  }
+  .menu-card .icon { width:64px; height:64px; }
+  .menu-card .label { font-size:15px; font-weight:700; color:var(--label-color); }
 
-  footer{
-    background:var(--bg);
-    color:var(--muted);
-    text-align:center;
-    padding:44px 20px 36px;
-    font-size:14px;
-    border-top:1px solid var(--border);
+  .service-desk {
+    position:sticky; bottom:70px;
+    display:flex; justify-content:flex-end; align-items:center; gap:10px;
+    padding:20px 18px 0;
   }
-  footer .logos{
-    display:flex;justify-content:center;align-items:center;gap:26px;
-    margin-bottom:22px;flex-wrap:wrap;
+  .service-desk-label {
+    background:#3d3d3d; color:#fff; padding:13px 18px; border-radius:8px;
+    font-size:14.5px; font-weight:600;
   }
-  footer .logos img{height:46px;width:auto;}
-  footer .copyright{font-size:13px;color:var(--muted);margin-bottom:6px;}
-  footer .site-title{font-size:14px;font-weight:700;color:var(--navy);max-width:640px;margin:0 auto 10px;line-height:1.5;}
-  footer .group-line{font-size:13px;color:var(--muted);}
+  .service-desk-avatar {
+    width:56px; height:56px; border-radius:50%; background:#3d3d3d;
+    display:flex; align-items:center; justify-content:center; overflow:hidden;
+  }
+  .service-desk-avatar svg { width:70%; height:70%; }
+
+  .footer { text-align:center; color:var(--text-grey); font-size:13px; padding:30px 10px 30px; }
 </style>
 </head>
 <body>
+<div class="phone">
 
-<div class="topbar">
-  <div class="topbar-inner">
-    <img src="unikl-logo.png" alt="Universiti Kuala Lumpur logo">
-    <img src="madani-logo.png" alt="Malaysia Madani logo">
+  <div class="app-header">
+    <h1>Home</h1>
+    <div class="header-icons">
+      <button aria-label="Notifications">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2a6 6 0 0 0-6 6v3.5L4 15h16l-2-3.5V8a6 6 0 0 0-6-6Z" fill="#fff"/><path d="M9.5 18a2.5 2.5 0 0 0 5 0Z" fill="#fff"/></svg>
+      </button>
+      <button aria-label="Log out">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="12" height="16" rx="2" fill="none" stroke="#fff" stroke-width="1.8"/><path d="M11 12h9M17 8l4 4-4 4" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+      </button>
+    </div>
   </div>
+
+  <div class="profile-wrap">
+    <div class="profile-card">
+      <div class="avatar-wrap">
+        <div class="avatar">
+          <img src="profile.jpg" alt="Profile photo">
+        </div>
+        <div class="camera-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 8h3l2-2h6l2 2h3v11H4Z" fill="#fff"/><circle cx="12" cy="13.5" r="3.4" fill="#2f6fb0"/></svg>
+        </div>
+      </div>
+      <div class="profile-name">NOR FATIHAH ALEEYA BINTI MOHD SALEHHUDDIN</div>
+      <div class="profile-email">fatihah.salehuddin@s.unikl.edu.my</div>
+      <div class="profile-id">62212124514 &ndash; UniKL BiS</div>
+    </div>
+  </div>
+
+  <div class="menu-grid">
+    <div class="menu-card" onclick="location.hash='academic'">
+      <svg class="icon" viewBox="0 0 64 64">
+        <path d="M12 12h30a6 6 0 0 1 6 6v34H18a6 6 0 0 1-6-6Z" fill="#f4c9b8"/>
+        <path d="M12 12h30a6 6 0 0 1 6 6v3H12Z" fill="#e2574c"/>
+        <path d="M12 18a6 6 0 0 1 6-6h6v40h-6a6 6 0 0 1-6-6Z" fill="#d94f45"/>
+        <rect x="22" y="10" width="6" height="16" fill="#f2b23c"/>
+      </svg>
+      <div class="label">Academic</div>
+    </div>
+
+    <div class="menu-card" onclick="location.hash='residential'">
+      <svg class="icon" viewBox="0 0 64 64">
+        <rect x="42" y="8" width="6" height="10" fill="#c76b4a"/>
+        <path d="M6 30 32 10l26 20v3H6Z" fill="#e2574c"/>
+        <path d="M12 33h40v22H12Z" fill="#f6c358"/>
+        <rect x="22" y="40" width="9" height="15" fill="#8a5a3b"/>
+        <rect x="35" y="41" width="12" height="9" fill="#5fa9d6"/>
+        <line x1="41" y1="41" x2="41" y2="50" stroke="#3d7ea6" stroke-width="1.4"/>
+        <line x1="35" y1="45.5" x2="47" y2="45.5" stroke="#3d7ea6" stroke-width="1.4"/>
+      </svg>
+      <div class="label">Residential</div>
+    </div>
+
+    <div class="menu-card" onclick="location.hash='financial'">
+      <svg class="icon" viewBox="0 0 64 64">
+        <ellipse cx="24" cy="46" rx="13" ry="5" fill="#c9932c"/>
+        <rect x="11" y="38" width="26" height="8" fill="#f4c542"/>
+        <ellipse cx="24" cy="38" rx="13" ry="5" fill="#ffe27a"/>
+        <ellipse cx="40" cy="34" rx="14" ry="5.5" fill="#c9932c"/>
+        <rect x="26" y="20" width="28" height="14" fill="#f4c542"/>
+        <ellipse cx="40" cy="20" rx="14" ry="5.5" fill="#ffe27a"/>
+      </svg>
+      <div class="label">Financial</div>
+    </div>
+
+    <div class="menu-card" onclick="location.hash='attendance'">
+      <svg class="icon" viewBox="0 0 64 64">
+        <rect x="8" y="8" width="48" height="48" rx="3" fill="#fff" stroke="#183a5c" stroke-width="2"/>
+        <rect x="12" y="12" width="10" height="10" fill="#183a5c"/>
+        <rect x="15" y="15" width="4" height="4" fill="#fff"/>
+        <rect x="42" y="12" width="10" height="10" fill="#183a5c"/>
+        <rect x="45" y="15" width="4" height="4" fill="#fff"/>
+        <rect x="12" y="42" width="10" height="10" fill="#183a5c"/>
+        <rect x="15" y="45" width="4" height="4" fill="#fff"/>
+        <rect x="27" y="12" width="4" height="4" fill="#183a5c"/>
+        <rect x="35" y="16" width="4" height="4" fill="#183a5c"/>
+        <rect x="27" y="20" width="4" height="8" fill="#183a5c"/>
+        <rect x="36" y="24" width="8" height="4" fill="#183a5c"/>
+        <rect x="12" y="28" width="34" height="3" fill="#e2724c"/>
+        <rect x="27" y="36" width="4" height="4" fill="#183a5c"/>
+        <rect x="34" y="36" width="10" height="10" fill="#183a5c"/>
+        <rect x="27" y="46" width="10" height="6" fill="#183a5c"/>
+        <rect x="42" y="46" width="4" height="4" fill="#183a5c"/>
+      </svg>
+      <div class="label">Attendance</div>
+    </div>
+
+    <div class="menu-card" onclick="location.hash='disciplinary'">
+      <svg class="icon" viewBox="0 0 64 64">
+        <rect x="10" y="50" width="22" height="6" rx="1.5" fill="#8a5a3b"/>
+        <rect x="27" y="18" width="8" height="24" rx="1.5" transform="rotate(45 31 30)" fill="#8a5a3b"/>
+        <rect x="17" y="16" width="22" height="10" rx="2" transform="rotate(45 28 21)" fill="#c76b4a"/>
+        <rect x="20" y="12" width="22" height="4" rx="1.5" transform="rotate(45 31 14)" fill="#e2a24c"/>
+        <rect x="24" y="8" width="22" height="4" rx="1.5" transform="rotate(45 35 10)" fill="#c76b4a"/>
+      </svg>
+      <div class="label">Disciplinary</div>
+    </div>
+
+    <div class="menu-card" onclick="location.hash='faq'">
+      <svg class="icon" viewBox="0 0 64 64">
+        <path d="M8 24a16 16 0 1 1 20 15.4V46l-8-6.6A16 16 0 0 1 8 24Z" fill="#7896a3"/>
+        <text x="19" y="29" font-size="16" font-weight="700" fill="#fff" font-family="Arial">?</text>
+        <path d="M55 40a11 11 0 1 0-16 9.8V54l6-4h1a11 11 0 0 0 9-9Z" fill="#f4c542"/>
+        <path d="M35 41l3 3 6-6" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="label">FAQ</div>
+    </div>
+  </div>
+
+  <div class="service-desk">
+    <div class="service-desk-label">Service Desk</div>
+    <div class="service-desk-avatar">
+      <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="32" fill="#3d3d3d"/><circle cx="32" cy="26" r="10" fill="#f2c2a0"/><path d="M14 54c1-11 9-17 18-17s17 6 18 17Z" fill="#e2574c"/><path d="M14 24a18 18 0 0 1 36 0v4h-4v-4a14 14 0 0 0-28 0v4h-4Z" fill="#2c2c2c"/><rect x="10" y="26" width="5" height="8" rx="2.5" fill="#2c2c2c"/><rect x="49" y="26" width="5" height="8" rx="2.5" fill="#2c2c2c"/></svg>
+    </div>
+  </div>
+
+  <div class="footer">Version 2.3.5 &copy; 2026 UniKL</div>
+
 </div>
-
-<header class="nav">
-  <div class="nav-inner">
-    <div class="brand"><img src="tiktok-icon.png" alt="TikTok icon">AI SUSTAINABILITY STUDY</div>
-    <nav class="nav-links">
-      <a href="#home">Home</a>
-      <a href="#literature-review">Literature Review</a>
-      <a href="#methodology">Methodology</a>
-      <a href="#about">About Us</a>
-    </nav>
-  </div>
-</header>
-
-<div class="hero" id="home">
-  <div class="hero-inner">
-    <div class="hero-eyebrow">EIB20503 Business Research Method (L08) &middot; Group 4</div>
-    <div class="hero-badges">
-      <img class="tiktok-main" src="tiktok-shop-logo.png" alt="TikTok Shop logo">
-      <img src="tiktok-icon.png" alt="TikTok icon">
-    </div>
-    <h1>Sustainability of AI in Retail &amp; E-Commerce: TikTok Shop Seller in Malaysia</h1>
-    <p>Examining whether AI adoption, the factors that influence it, and customer satisfaction and trust actually translate into environmental sustainability for Malaysian TikTok Shop sellers.</p>
-  </div>
-</div>
-
-<main>
-
-  <section id="introduction">
-    <h2>Introduction</h2>
-    <figure class="section-image">
-      <img src="ai-hero-banner.jpg" alt="Artificial intelligence in retail and e-commerce">
-      <figcaption>AI adoption is reshaping how TikTok Shop sellers run their businesses in Malaysia.</figcaption>
-    </figure>
-    <p>E-commerce in Malaysia grew quickly after the COVID-19 pandemic, and platforms such as TikTok Shop have become a major part of how Malaysians buy and sell products, commonly known as the "Yellow Basket" or "Beg Kuning." As competition among sellers increases, many TikTok Shop sellers are turning to Artificial Intelligence (AI) to improve their operations, attract customers, and increase sales. This study examines whether AI adoption, the factors that influence it, and customer satisfaction and trust actually contribute to environmental sustainability among these sellers.</p>
-  </section>
-
-  <section id="problem-statement">
-    <h2>Problem Statement</h2>
-    <p>TikTok Shop sellers face growing pressure to stay competitive, and many are turning to AI to help. However, it is still unclear whether AI adoption actually supports business sustainability, especially environmentally. Some sellers also face barriers to adopting AI, such as limited resources, skills, or external support. This study investigates how AI adoption affects environmental sustainability among TikTok Shop sellers in Malaysia.</p>
-  </section>
-
-  <section id="objectives">
-    <h2>Research Objectives</h2>
-    <div class="grid-2">
-      <div class="card"><span class="tag">RO1</span><p>To evaluate the influence of organizational and external factors on AI adoption among TikTok Shop sellers in Malaysia.</p></div>
-      <div class="card"><span class="tag">RO2</span><p>To evaluate the direct impact of AI adoption on customer sustainability among TikTok Shop sellers in Malaysia.</p></div>
-      <div class="card"><span class="tag">RO3</span><p>To evaluate the direct impact of AI adoption on environmental sustainability among TikTok Shop sellers in Malaysia.</p></div>
-      <div class="card"><span class="tag">RO4</span><p>To determine the overall combined effect of AI adoption on long-term business sustainability among TikTok Shop sellers in Malaysia.</p></div>
-    </div>
-  </section>
-
-  <section id="questions">
-    <h2>Research Questions</h2>
-    <div class="grid-2">
-      <div class="card"><span class="tag">RQ1</span><p>How do organizational and external factors influence AI adoption among TikTok Shop sellers in Malaysia?</p></div>
-      <div class="card"><span class="tag">RQ2</span><p>What is the direct effect of AI adoption on customer sustainability among TikTok Shop sellers in Malaysia?</p></div>
-      <div class="card"><span class="tag">RQ3</span><p>What is the direct effect of AI adoption on environmental sustainability among TikTok Shop sellers in Malaysia?</p></div>
-      <div class="card"><span class="tag">RQ4</span><p>How significantly does AI adoption contribute to overall long-term business sustainability among TikTok Shop sellers in Malaysia?</p></div>
-    </div>
-  </section>
-
-  <section id="hypothesis">
-    <h2>Hypothesis</h2>
-    <div class="grid-2">
-      <div class="card"><span class="tag">H1</span><p><strong>Demographic Profile &rarr; Environmental Sustainability.</strong> There is a significant difference in environmental sustainability among TikTok Shop sellers based on their demographic profiles. Prior TOE-based studies on Malaysian MSMEs have tested whether firm-level or individual characteristics moderate the strength of technology-adoption relationships, so gender, age, business type and years of experience are expected to shape how strongly AI-related factors translate into environmental outcomes.</p></div>
-      <div class="card"><span class="tag">H2</span><p><strong>AI Adoption &rarr; Environmental Sustainability.</strong> There is a significant relationship between AI adoption and environmental sustainability. AI tools such as predictive inventory management are theorised to reduce overproduction and unsold stock, in line with how Diffusion of Innovation theory describes AI spreading through practical, observed benefits among peer sellers.</p></div>
-      <div class="card"><span class="tag">H3</span><p><strong>Factors Influencing AI Adoption &rarr; Environmental Sustainability.</strong> There is a significant relationship between factors influencing AI adoption and environmental sustainability. The TOE framework explains that organizational conditions (management support, employee skills) and environmental conditions (cost, government support) determine whether AI is implemented effectively enough to support sustainable practices.</p></div>
-      <div class="card"><span class="tag">H4</span><p><strong>Customer Satisfaction and Trust &rarr; Environmental Sustainability.</strong> There is a significant relationship between customer satisfaction and trust and environmental sustainability. Sellers who build stronger customer relationships through reliable AI interactions are more likely to sustain long-term operations, supporting continued investment in sustainable practices rather than short-term survival tactics.</p></div>
-    </div>
-  </section>
-
-  <section id="scope">
-    <h2>Scope of Study</h2>
-    <p>This study focuses on the retail and e-commerce industry in Malaysia, specifically targeting active sellers on TikTok Shop, one of the country's fastest-growing social commerce platforms. Data is collected through an online questionnaire hosted on Google Forms and distributed through digital channels such as WhatsApp and TikTok to reach respondents efficiently. Rather than covering every aspect of a seller's operations, the research is scoped around understanding how sellers experience and perceive AI adoption, the conditions that shape whether they take it up, and what that adoption ultimately means for environmental and business sustainability within the Malaysian social commerce landscape.</p>
-  </section>
-
-  <section id="significance">
-    <h2>Significance of Study</h2>
-    <div class="grid-3">
-      <div class="card"><span class="tag">Theoretical</span><p>Adds to the growing body of research on AI adoption and sustainability by extending a stream of literature that has mostly focused on large corporations to small and medium retail and e-commerce sellers, linking adoption drivers such as cost, management support, employee skills, and government support to environmental and customer-facing outcomes.</p></div>
-      <div class="card"><span class="tag">Practical</span><p>Helps TikTok Shop sellers identify which factors matter most when deciding to adopt AI, so they can plan their investment more deliberately around what actually supports their sustainability goals and customer relationships. Also gives government agencies a clearer basis for designing support programmes and incentives.</p></div>
-      <div class="card"><span class="tag">Future Research</span><p>Provides a foundation for future studies extending this model to other e-commerce platforms or industries beyond TikTok Shop, and for exploring variables not covered here, such as cybersecurity or data privacy concerns in AI-driven retail.</p></div>
-    </div>
-  </section>
-
-  <section id="literature-review">
-    <h2>Literature Review</h2>
-    <h3>Underpinning Theory</h3>
-    <figure class="section-image">
-      <img src="ai-robot.jpg" alt="Artificial intelligence concept illustration">
-    </figure>
-    <p>This study is grounded in the <strong>Diffusion of Innovation (DOI) Theory</strong> linked to the <strong>Technology-Organization-Environment (TOE) Framework</strong>. DOI theory explains how AI tools such as chatbots and inventory systems spread among TikTok Shop sellers as they observe the results achieved by similar businesses. The TOE framework explains AI adoption through three factors: technology, organization (management support, employee skills), and environment (cost, government support).</p>
-
-    <h3 style="margin-top:28px;">Variables of Study</h3>
-    <div class="grid-2">
-      <div class="card var-card"><span class="tag">IV1</span><h3>AI Adoption</h3><p>The extent to which a business incorporates AI tools such as chatbots, personalised recommendation systems, and inventory management software into its daily operations. Rather than a simple yes-or-no decision, adoption is treated as a matter of degree, consistent with how Diffusion of Innovation theory describes new technology spreading gradually as sellers observe results achieved by their peers.</p></div>
-      <div class="card var-card"><span class="tag">IV2</span><h3>Factors Influencing AI Adoption</h3><p>The organizational and environmental conditions that shape whether a business adopts AI. Organizational factors include management support and employee technical skills; environmental factors include the cost of AI tools and the availability of government grants or training programmes. Together, grounded in the Technology-Organization-Environment framework, these conditions determine whether adoption translates into real benefits.</p></div>
-      <div class="card var-card"><span class="tag">IV3</span><h3>Customer Satisfaction and Trust</h3><p>How positively customers respond to a seller's AI-enabled tools, such as chatbots and personalised product recommendations, and how much confidence they place in those tools when deciding to buy. This captures the market-facing side of AI adoption, where customer approval is what allows continued investment in AI to pay off.</p></div>
-      <div class="card var-card"><span class="tag">DV</span><h3>Environmental Sustainability</h3><p>A business's ability to reduce its negative impact on the environment, through less wasted stock, more efficient use of resources, and lower energy consumption, while still remaining commercially viable. Because independently verified environmental data isn't available for small, individually run sellers, this study measures the construct through sellers' own reported perceptions.</p></div>
-    </div>
-    <div class="card var-card" style="margin-top:16px;"><span class="tag">MODERATOR</span><h3>Demographic Profile</h3><p>Background characteristics of sellers, including gender, age, type of business, and years of business experience, expected to influence how strongly AI adoption and its related factors translate into environmental sustainability outcomes, rather than affecting sustainability directly on their own. Because TikTok Shop sellers in Malaysia are a highly varied group, this profile is tested as a moderator through multi-group analysis rather than treated as a simple background variable.</p></div>
-  </section>
-
-  <section id="methodology">
-    <h2>Research Methodology</h2>
-    <h3>Research Design</h3>
-    <p>A quantitative approach with a cross-sectional, cause-and-effect design. Data is collected once from TikTok Shop sellers to test how AI Adoption, Factors Influencing AI Adoption, and Customer Satisfaction and Trust directly influence Environmental Sustainability, while examining the moderating role of Demographic Profile.</p>
-
-    <h3 style="margin-top:20px;">Population &amp; Sampling</h3>
-    <p>Active TikTok Shop sellers operating in Malaysia. Since no centralized sampling frame exists, this study uses convenience sampling, targeting sellers who currently use or have previously used AI tools. A minimum sample of 100 respondents will be collected, sufficient to support PLS-SEM analysis.</p>
-
-    <h3 style="margin-top:20px;">Measurement &amp; Scaling</h3>
-    <p>A five-point Likert scale (1 = Strongly Disagree, 5 = Strongly Agree) across four constructs, each measured with five items. Demographic information is measured using nominal and ordinal categorical items.</p>
-
-    <div class="item-block">
-      <h4>AI Adoption (IV1)</h4>
-      <div class="item-row"><div class="item-code">AI1</div><div class="item-text">AI adoption improves the sustainability of the retail/e-commerce business.</div></div>
-      <div class="item-row"><div class="item-code">AI2</div><div class="item-text">AI helps the business operate more efficiently.</div></div>
-      <div class="item-row"><div class="item-code">AI3</div><div class="item-text">AI adoption helps reduce the environmental impact of the business.</div></div>
-      <div class="item-row"><div class="item-code">AI4</div><div class="item-text">AI supports sustainable business practices in the organization.</div></div>
-      <div class="item-row"><div class="item-code">AI5</div><div class="item-text">The organization considers AI integration as a long-term strategic priority for business growth.</div></div>
-    </div>
-
-    <div class="item-block">
-      <h4>Factors Influencing AI Adoption (IV2)</h4>
-      <div class="item-row"><div class="item-code">FA1</div><div class="item-text">The benefits of AI encourage the organization to adopt AI.</div></div>
-      <div class="item-row"><div class="item-code">FA2</div><div class="item-text">The cost of AI influences the organization's decision to adopt AI.</div></div>
-      <div class="item-row"><div class="item-code">FA3</div><div class="item-text">Management support encourages AI adoption in the organization.</div></div>
-      <div class="item-row"><div class="item-code">FA4</div><div class="item-text">Employee skills influence the organization's ability to adopt AI.</div></div>
-      <div class="item-row"><div class="item-code">FA5</div><div class="item-text">Government initiatives and regulatory support encourage the organization to adopt AI.</div></div>
-    </div>
-
-    <div class="item-block">
-      <h4>Customer Satisfaction and Trust (IV3)</h4>
-      <div class="item-row"><div class="item-code">CS1</div><div class="item-text">AI-driven personalization like product recommendations and chatbots enhances overall customer satisfaction.</div></div>
-      <div class="item-row"><div class="item-code">CS2</div><div class="item-text">Customers respond positively to the use of AI tools in the TikTok Shop operations.</div></div>
-      <div class="item-row"><div class="item-code">CS3</div><div class="item-text">AI adoption improves customer trust and brand loyalty.</div></div>
-      <div class="item-row"><div class="item-code">CS4</div><div class="item-text">AI tools help the business respond to customer needs faster.</div></div>
-      <div class="item-row"><div class="item-code">CS5</div><div class="item-text">Customers are more likely to make repeat purchases when AI is used in the TikTok Shop.</div></div>
-    </div>
-
-    <div class="item-block">
-      <h4>Environmental Sustainability (DV)</h4>
-      <div class="item-row"><div class="item-code">ES1</div><div class="item-text">AI helps reduce energy consumption in the business.</div></div>
-      <div class="item-row"><div class="item-code">ES2</div><div class="item-text">AI helps reduce waste in business operations.</div></div>
-      <div class="item-row"><div class="item-code">ES3</div><div class="item-text">AI helps the business use resources more efficiently.</div></div>
-      <div class="item-row"><div class="item-code">ES4</div><div class="item-text">AI adoption contributes to better environmental sustainability.</div></div>
-      <div class="item-row"><div class="item-code">ES5</div><div class="item-text">The organization plans to increase AI usage to further support environmental sustainability goals.</div></div>
-    </div>
-
-    <h3 style="margin-top:20px;">Data Collection</h3>
-    <p>The questionnaire is distributed online through direct messaging on TikTok, Threads, and WhatsApp, targeting sellers who currently use AI in their operations. A reminder is sent approximately one week after initial distribution.</p>
-
-    <h3 style="margin-top:20px;">Data Analysis</h3>
-    <p>Data is analyzed using SmartPLS (Partial Least Squares Structural Equation Modeling). Indicator reliability, path coefficients, and the R-square value are examined, followed by bootstrapping to test the significance of each hypothesized relationship.</p>
-  </section>
-
-  <section id="about">
-    <h2>About Us</h2>
-    <p style="margin-bottom:30px;">Business Research Method (EIB20503) &mdash; Group 4, Class L08<br>Prepared for Mr. Amirul Daniel Sulaiman</p>
-
-    <div class="team-grid">
-      <div class="member">
-        <div class="role">Team Member</div>
-        <div class="photo"><img src="khadijah.jpg" alt="Nurul Khadijah Binti Rosli"></div>
-        <div class="name">Nurul Khadijah Binti Rosli</div>
-        <div class="id">62212124093</div>
-      </div>
-      <div class="member">
-        <div class="role">Team Member</div>
-        <div class="photo"><img src="balqis.jpg" alt="Siti Balqis Binti Zulzini"></div>
-        <div class="name">Siti Balqis Binti Zulzini</div>
-        <div class="id">62212124016</div>
-      </div>
-      <div class="member">
-        <div class="role">Team Member</div>
-        <div class="photo"><img src="juliana.jpg" alt="Nur Juliana Malihah Binti Kamaruzzaman"></div>
-        <div class="name">Nur Juliana Malihah Binti Kamaruzzaman</div>
-        <div class="id">62212124724</div>
-      </div>
-      <div class="member">
-        <div class="role">Team Member</div>
-        <div class="photo"><img src="nafisa.jpg" alt="Nurul Nafisa Binti Sofian"></div>
-        <div class="name">Nurul Nafisa Binti Sofian</div>
-        <div class="id">62212124360</div>
-      </div>
-    </div>
-
-    <div class="lecturer-wrap">
-      <div class="member">
-        <div class="role">Lecturer</div>
-        <div class="photo"><img src="lecturer.jpg" alt="Mr. Amirul Daniel Bin Sulaiman"></div>
-        <div class="name">Mr. Amirul Daniel Bin Sulaiman</div>
-        <div class="id">&nbsp;</div>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer>
-  <div class="logos">
-    <img src="unikl-logo.png" alt="Universiti Kuala Lumpur logo">
-    <img src="madani-logo.png" alt="Malaysia Madani logo">
-  </div>
-  <div class="copyright">&copy; 2026 UniKL Business School. All rights reserved.</div>
-  <div class="site-title">Sustainability of AI in Retail &amp; E-Commerce (TikTok Shop Seller) in Malaysia</div>
-  <div class="group-line">Group 4 &middot; August 2026</div>
-</footer>
-
 </body>
 </html>
